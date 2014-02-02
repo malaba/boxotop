@@ -88,6 +88,26 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		50A3C74A189E8C2200B10EA2 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		50A3C74B189E8C2C00B10EA2 /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				50AA53AA189DAFED006AB237 /* MasterViewController.h */,
+				50A69D34189E7D0A00EE4119 /* MasterViewController+Private.h */,
+				50AA53AB189DAFED006AB237 /* MasterViewController.m */,
+				50AA53AD189DAFED006AB237 /* DetailViewController.h */,
+				50A69D31189E7B8800EE4119 /* DetailViewController+Private.h */,
+				50AA53AE189DAFED006AB237 /* DetailViewController.m */,
+			);
+			name = ViewController;
+			sourceTree = "<group>";
+		};
 		50AA5389189DAFED006AB237 = {
 			isa = PBXGroup;
 			children = (
@@ -126,12 +146,8 @@
 				50AA53A4189DAFED006AB237 /* AppDelegate.h */,
 				50AA53A5189DAFED006AB237 /* AppDelegate.m */,
 				50AA53A7189DAFED006AB237 /* Main.storyboard */,
-				50AA53AA189DAFED006AB237 /* MasterViewController.h */,
-				50A69D34189E7D0A00EE4119 /* MasterViewController+Private.h */,
-				50AA53AB189DAFED006AB237 /* MasterViewController.m */,
-				50AA53AD189DAFED006AB237 /* DetailViewController.h */,
-				50A69D31189E7B8800EE4119 /* DetailViewController+Private.h */,
-				50AA53AE189DAFED006AB237 /* DetailViewController.m */,
+				50A3C74A189E8C2200B10EA2 /* Model */,
+				50A3C74B189E8C2C00B10EA2 /* ViewController */,
 				50AA53B0189DAFED006AB237 /* Images.xcassets */,
 				50AA539C189DAFED006AB237 /* Supporting Files */,
 			);
