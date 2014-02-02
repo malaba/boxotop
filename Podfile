@@ -4,6 +4,7 @@ target :boxotop do
 
   pod 'AFNetworking'
   pod 'Mantle'
+  pod 'MBProgressHUD'
 
 end
 

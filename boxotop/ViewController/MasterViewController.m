@@ -14,6 +14,7 @@
 #import "Movie_Cell.h"
 
 #import <AFNetworking.h>
+#import <MBProgressHUD.h>
 #import <UIImageView+AFNetworking.h>
 
 
@@ -29,6 +30,9 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
+    UIBarButtonItem *refreshButton = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemRefresh target:self action:@selector(refresh:)];
+    self.navigationItem.rightBarButtonItem = refreshButton;
+    
     [self fetchBoxOffice];
 }
 
@@ -41,17 +45,28 @@
 }
 
 #pragma mark - Utils
+- (void)refresh:(id)sender {
+    [self.model removeAllObjects];
+    [self fetchBoxOffice];
+}
+
 - (void)fetchBoxOffice {
+    [MBProgressHUD showHUDAddedTo:self.view animated:YES];
+    
     AFHTTPRequestOperationManager *manager = [AFHTTPRequestOperationManager manager];
     
     [manager GET:@"http://xebiamobiletest.herokuapp.com/api/public/v1.0/lists/movies/box_office.json"
       parameters:nil
          success:^(AFHTTPRequestOperation *operation, id responseObject) {
+             [MBProgressHUD hideHUDForView:self.view animated:YES];
+             
              if ([responseObject isKindOfClass:[NSDictionary class]]) {
                  [self parseResponse:responseObject];
              }
          }
          failure:^(AFHTTPRequestOperation *operation, NSError *error) {
+             [MBProgressHUD hideHUDForView:self.view animated:YES];
+             
              NSLog(@"Error: %@", error);
          }];
 }
