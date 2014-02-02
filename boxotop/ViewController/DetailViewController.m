@@ -45,6 +45,9 @@
 #pragma mark - Utils
 - (void)configureView {
     self.titleLabel.text = self.movie.title;
+    self.borderView.layer.borderColor = [[UIColor blackColor] CGColor];
+    self.borderView.layer.borderWidth = 1.0f;
+    
     [self.thumbnailImageView setImageWithURL:self.movie.posters.detailed];
     self.releaseDateLabel.text = [self.dateFormatter stringFromDate:self.movie.theaterReleaseDate];
     

@@ -103,6 +103,8 @@
     
     Movie *movie = self.model[indexPath.row];
     
+    cell.contentView.backgroundColor = indexPath.row%2 ? [UIColor whiteColor] : [UIColor colorWithRed:86.0/255 green:129.0/255 blue:103.0/255 alpha:1.0];
+    
     cell.titleLabel.text = movie.title;
     cell.yearLabel.text = [NSString stringWithFormat:@"(%@)", [movie.year stringValue]];
     [cell.thumbnail setImageWithURL:movie.posters.profile];

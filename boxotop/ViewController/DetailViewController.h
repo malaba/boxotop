@@ -15,6 +15,7 @@
 
 @property (strong, nonatomic) Movie *movie;
 
+@property (weak, nonatomic) IBOutlet UIView *borderView;
 @property (weak, nonatomic) IBOutlet UILabel *titleLabel;
 @property (weak, nonatomic) IBOutlet UIImageView *thumbnailImageView;
 @property (weak, nonatomic) IBOutlet UILabel *releaseDateLabel;
