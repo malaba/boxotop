@@ -89,7 +89,7 @@
     Movie *movie = self.model[indexPath.row];
     
     cell.titleLabel.text = movie.title;
-    cell.yearLabel.text = [movie.year stringValue];
+    cell.yearLabel.text = [NSString stringWithFormat:@"(%@)", [movie.year stringValue]];
     [cell.thumbnail setImageWithURL:movie.posters.profile];
     
     return cell;
