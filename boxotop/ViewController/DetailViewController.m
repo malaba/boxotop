@@ -55,6 +55,7 @@
     self.audienceScoreImageView.image = [self imageFromScore:self.movie.ratings.audience_score];
     
     self.synopsisTextView.text = self.movie.synopsis;
+    self.castTextView.text = [self castsList];
 }
 
 - (UIImage *)imageFromScore:(NSNumber *)score {
@@ -89,6 +90,18 @@
             return nil;
             break;
     }
+}
+
+- (NSString *)castsList {
+    NSMutableString *casts = [NSMutableString new];
+    
+    for (Cast *cast in self.movie.abridged_cast) {
+        [casts appendFormat:@", %@", cast.name];
+    }
+    
+    [casts deleteCharactersInRange:NSMakeRange(0, 2)];
+    
+    return casts;
 }
 
 @end

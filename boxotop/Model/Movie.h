@@ -8,6 +8,7 @@
 
 #import <Mantle.h>
 
+#import "Cast.h"
 #import "Posters.h"
 #import "Ratings.h"
 

@@ -8,8 +8,6 @@
 
 #import "Movie.h"
 
-#import "Cast.h"
-
 
 @implementation Movie
 
