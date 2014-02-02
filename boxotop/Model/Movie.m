@@ -8,6 +8,8 @@
 
 #import "Movie.h"
 
+#import "Cast.h"
+
 
 @implementation Movie
 
@@ -35,14 +37,6 @@
     };
 }
 
-+ (NSValueTransformer *)postersJSONTransformer {
-    return [NSValueTransformer mtl_JSONDictionaryTransformerWithModelClass:Posters.class];
-}
-
-+ (NSValueTransformer *)ratingsJSONTransformer {
-    return [NSValueTransformer mtl_JSONDictionaryTransformerWithModelClass:Ratings.class];
-}
-
 + (NSValueTransformer *)theaterReleaseDateJSONTransformer {
     return [MTLValueTransformer reversibleTransformerWithForwardBlock:^(NSString *str) {
         return [self.dateFormatter dateFromString:str];
@@ -50,5 +44,19 @@
         return [self.dateFormatter stringFromDate:date];
     }];
 }
+
++ (NSValueTransformer *)ratingsJSONTransformer {
+    return [NSValueTransformer mtl_JSONDictionaryTransformerWithModelClass:Ratings.class];
+}
+
++ (NSValueTransformer *)postersJSONTransformer {
+    return [NSValueTransformer mtl_JSONDictionaryTransformerWithModelClass:Posters.class];
+}
+
++ (NSValueTransformer *)abridged_castJSONTransformer {
+    return [NSValueTransformer mtl_JSONArrayTransformerWithModelClass:Cast.class];
+}
+
+
 
 @end
