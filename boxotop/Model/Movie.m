@@ -39,6 +39,10 @@
     return [NSValueTransformer mtl_JSONDictionaryTransformerWithModelClass:Posters.class];
 }
 
++ (NSValueTransformer *)ratingsJSONTransformer {
+    return [NSValueTransformer mtl_JSONDictionaryTransformerWithModelClass:Ratings.class];
+}
+
 + (NSValueTransformer *)theaterReleaseDateJSONTransformer {
     return [MTLValueTransformer reversibleTransformerWithForwardBlock:^(NSString *str) {
         return [self.dateFormatter dateFromString:str];

@@ -9,6 +9,7 @@
 #import <Mantle.h>
 
 #import "Posters.h"
+#import "Ratings.h"
 
 
 @interface Movie : MTLModel <MTLJSONSerializing>
@@ -20,9 +21,8 @@
 @property (readonly, copy, nonatomic) NSNumber *runtime;
 @property (readonly, copy, nonatomic) NSString *critics_consensus;
 @property (readonly, copy, nonatomic) NSDate *theaterReleaseDate;
-
+@property (readonly, copy, nonatomic) Ratings *ratings;
 @property (readonly, copy, nonatomic) NSString *synopsis;
-
 @property (readonly, copy, nonatomic) Posters *posters;
 
 @end

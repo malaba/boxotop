@@ -12,6 +12,7 @@
 		503E57D2189E992800DEC004 /* Movie.m in Sources */ = {isa = PBXBuildFile; fileRef = 503E57D1189E992800DEC004 /* Movie.m */; };
 		503E57D9189E99D600DEC004 /* Movie_Cell.m in Sources */ = {isa = PBXBuildFile; fileRef = 503E57D8189E99D600DEC004 /* Movie_Cell.m */; };
 		503E57DC189EA27A00DEC004 /* Posters.m in Sources */ = {isa = PBXBuildFile; fileRef = 503E57DB189EA27A00DEC004 /* Posters.m */; };
+		5080A670189EC91C0061695A /* Ratings.m in Sources */ = {isa = PBXBuildFile; fileRef = 5080A66F189EC91C0061695A /* Ratings.m */; };
 		50AA5396189DAFED006AB237 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 50AA5395189DAFED006AB237 /* Foundation.framework */; };
 		50AA5398189DAFED006AB237 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 50AA5397189DAFED006AB237 /* CoreGraphics.framework */; };
 		50AA539A189DAFED006AB237 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 50AA5399189DAFED006AB237 /* UIKit.framework */; };
@@ -51,6 +52,8 @@
 		503E57D8189E99D600DEC004 /* Movie_Cell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Movie_Cell.m; sourceTree = "<group>"; };
 		503E57DA189EA27A00DEC004 /* Posters.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Posters.h; sourceTree = "<group>"; };
 		503E57DB189EA27A00DEC004 /* Posters.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Posters.m; sourceTree = "<group>"; };
+		5080A66E189EC91C0061695A /* Ratings.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Ratings.h; sourceTree = "<group>"; };
+		5080A66F189EC91C0061695A /* Ratings.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Ratings.m; sourceTree = "<group>"; };
 		50AA5392189DAFED006AB237 /* boxotop.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = boxotop.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		50AA5395189DAFED006AB237 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		50AA5397189DAFED006AB237 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -117,6 +120,8 @@
 				503E57D1189E992800DEC004 /* Movie.m */,
 				503E57DA189EA27A00DEC004 /* Posters.h */,
 				503E57DB189EA27A00DEC004 /* Posters.m */,
+				5080A66E189EC91C0061695A /* Ratings.h */,
+				5080A66F189EC91C0061695A /* Ratings.m */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -343,6 +348,7 @@
 				50AA53A6189DAFED006AB237 /* AppDelegate.m in Sources */,
 				503E57CE189E988A00DEC004 /* MasterViewController.m in Sources */,
 				503E57CD189E988A00DEC004 /* DetailViewController.m in Sources */,
+				5080A670189EC91C0061695A /* Ratings.m in Sources */,
 				503E57D2189E992800DEC004 /* Movie.m in Sources */,
 				503E57D9189E99D600DEC004 /* Movie_Cell.m in Sources */,
 				503E57DC189EA27A00DEC004 /* Posters.m in Sources */,
