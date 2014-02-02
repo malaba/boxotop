@@ -19,6 +19,7 @@
 @property (readonly, copy, nonatomic) NSString *mpaa_rating;
 @property (readonly, copy, nonatomic) NSNumber *runtime;
 @property (readonly, copy, nonatomic) NSString *critics_consensus;
+@property (readonly, copy, nonatomic) NSDate *theaterReleaseDate;
 
 @property (readonly, copy, nonatomic) NSString *synopsis;
 

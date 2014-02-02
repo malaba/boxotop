@@ -10,6 +10,7 @@
 
 @implementation Posters
 
+#pragma mark - MTLJSONSerializing Protocol
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
     // Note: all properties are implicitly mapped
     return @{};

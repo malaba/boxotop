@@ -10,6 +10,8 @@
 
 @interface DetailViewController ()
 
+@property (strong, nonatomic) NSDateFormatter *dateFormatter;
+
 - (void)configureView;
 
 @end
