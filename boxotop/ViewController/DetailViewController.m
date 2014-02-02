@@ -53,6 +53,8 @@
     
     self.criticsScoreImageView.image = [self imageFromScore:self.movie.ratings.critics_score];
     self.audienceScoreImageView.image = [self imageFromScore:self.movie.ratings.audience_score];
+    
+    self.synopsisTextView.text = self.movie.synopsis;
 }
 
 - (UIImage *)imageFromScore:(NSNumber *)score {
