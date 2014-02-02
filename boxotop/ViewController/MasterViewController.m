@@ -14,6 +14,7 @@
 #import "Movie_Cell.h"
 
 #import <AFNetworking.h>
+#import <UIImageView+AFNetworking.h>
 
 
 @implementation MasterViewController
@@ -89,6 +90,7 @@
     
     cell.titleLabel.text = movie.title;
     cell.yearLabel.text = [movie.year stringValue];
+    [cell.thumbnail setImageWithURL:movie.posters.profile];
     
     return cell;
 }

@@ -8,7 +8,7 @@
 
 #import <Mantle.h>
 
-@class Posters;
+#import "Posters.h"
 
 
 @interface Movie : MTLModel <MTLJSONSerializing>

@@ -8,7 +8,6 @@
 
 #import "Movie.h"
 
-#import "Posters.h"
 
 @implementation Movie
 
