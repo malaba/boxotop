@@ -11,8 +11,28 @@
 @implementation Posters
 
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
-    // Note: all properties are implicitly mapped
-    return @{};
+    return @{
+               @"thumbnailURL": @"thumbnail",
+               @"profileURL": @"profile",
+               @"detailedURL": @"detailed",
+               @"originalURL": @"original"
+    };
+}
+
++ (NSValueTransformer *)thumbnailURLJSONTransformer {
+    return [NSValueTransformer valueTransformerForName:MTLURLValueTransformerName];
+}
+
++ (NSValueTransformer *)profileURLJSONTransformer {
+    return [NSValueTransformer valueTransformerForName:MTLURLValueTransformerName];
+}
+
++ (NSValueTransformer *)detailedURLJSONTransformer {
+    return [NSValueTransformer valueTransformerForName:MTLURLValueTransformerName];
+}
+
++ (NSValueTransformer *)originalURLJSONTransformer {
+    return [NSValueTransformer valueTransformerForName:MTLURLValueTransformerName];
 }
 
 @end

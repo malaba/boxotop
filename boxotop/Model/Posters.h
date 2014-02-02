@@ -10,9 +10,9 @@
 
 @interface Posters : MTLModel <MTLJSONSerializing>
 
-@property (readonly, copy, nonatomic) NSURL *thumbnail;
-@property (readonly, copy, nonatomic) NSURL *profile;
-@property (readonly, copy, nonatomic) NSURL *detailed;
-@property (readonly, copy, nonatomic) NSURL *original;
+@property (readonly, copy, nonatomic) NSURL *thumbnailURL;
+@property (readonly, copy, nonatomic) NSURL *profileURL;
+@property (readonly, copy, nonatomic) NSURL *detailedURL;
+@property (readonly, copy, nonatomic) NSURL *originalURL;
 
 @end

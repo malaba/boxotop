@@ -8,13 +8,19 @@
 
 #import "Movie.h"
 
+#import "Posters.h"
+
 @implementation Movie
 
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
     // Note: almost all properties are implicitly mapped
     return @{
-             @"movieID" : @"id"
+             @"movieID": @"id"
     };
+}
+
++ (NSValueTransformer *)postersJSONTransformer {
+    return [NSValueTransformer mtl_JSONDictionaryTransformerWithModelClass:Posters.class];
 }
 
 @end
