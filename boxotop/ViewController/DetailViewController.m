@@ -23,7 +23,7 @@
     
     self.dateFormatter = [NSDateFormatter new];
     self.dateFormatter.locale = [[NSLocale alloc] initWithLocaleIdentifier:@"en_US_POSIX"];
-    self.dateFormatter.dateFormat = @"MMM dd yyyy";
+    self.dateFormatter.dateFormat = @"MMM d yyyy";
 }
 
 - (void)viewDidLoad {
@@ -47,6 +47,43 @@
     self.titleLabel.text = self.movie.title;
     [self.thumbnailImageView setImageWithURL:self.movie.posters.detailed];
     self.releaseDateLabel.text = [self.dateFormatter stringFromDate:self.movie.theaterReleaseDate];
+    
+    self.criticsScoreImageView.image = [self imageFromScore:self.movie.ratings.critics_score];
+    self.audienceScoreImageView.image = [self imageFromScore:self.movie.ratings.audience_score];
+}
+
+- (UIImage *)imageFromScore:(NSNumber *)score {
+    NSUInteger integerScore = floor([score doubleValue]/20.0 + 0.5);
+    
+    switch (integerScore) {
+        case 0:
+            return nil;
+            break;
+            
+        case 1:
+            return [UIImage imageNamed:@"1starSmall"];
+            break;
+
+        case 2:
+            return [UIImage imageNamed:@"2starSmall"];
+            break;
+            
+        case 3:
+            return [UIImage imageNamed:@"3starSmall"];
+            break;
+            
+        case 4:
+            return [UIImage imageNamed:@"4starSmall"];
+            break;
+            
+        case 5:
+            return [UIImage imageNamed:@"5starSmall"];
+            break;
+            
+        default:
+            return nil;
+            break;
+    }
 }
 
 @end
