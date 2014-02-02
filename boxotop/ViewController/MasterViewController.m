@@ -11,6 +11,7 @@
 
 #import "DetailViewController.h"
 #import "Movie.h"
+#import "Movie_Cell.h"
 
 #import <AFNetworking.h>
 
@@ -82,7 +83,7 @@
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"Cell" forIndexPath:indexPath];
+    Movie_Cell *cell = [tableView dequeueReusableCellWithIdentifier:@"Movie_Cell" forIndexPath:indexPath];
 
     return cell;
 }
