@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		50A3C74E189E8DD700B10EA2 /* Movie.m in Sources */ = {isa = PBXBuildFile; fileRef = 50A3C74D189E8DD700B10EA2 /* Movie.m */; };
 		50AA5396189DAFED006AB237 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 50AA5395189DAFED006AB237 /* Foundation.framework */; };
 		50AA5398189DAFED006AB237 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 50AA5397189DAFED006AB237 /* CoreGraphics.framework */; };
 		50AA539A189DAFED006AB237 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 50AA5399189DAFED006AB237 /* UIKit.framework */; };
@@ -36,6 +37,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		50A3C74C189E8DD700B10EA2 /* Movie.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Movie.h; path = Model/Movie.h; sourceTree = "<group>"; };
+		50A3C74D189E8DD700B10EA2 /* Movie.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Movie.m; path = Model/Movie.m; sourceTree = "<group>"; };
 		50A69D31189E7B8800EE4119 /* DetailViewController+Private.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "DetailViewController+Private.h"; sourceTree = "<group>"; };
 		50A69D34189E7D0A00EE4119 /* MasterViewController+Private.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "MasterViewController+Private.h"; sourceTree = "<group>"; };
 		50AA5392189DAFED006AB237 /* boxotop.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = boxotop.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -91,6 +94,8 @@
 		50A3C74A189E8C2200B10EA2 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				50A3C74C189E8DD700B10EA2 /* Movie.h */,
+				50A3C74D189E8DD700B10EA2 /* Movie.m */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -315,6 +320,7 @@
 			files = (
 				50AA53A6189DAFED006AB237 /* AppDelegate.m in Sources */,
 				50AA53AC189DAFED006AB237 /* MasterViewController.m in Sources */,
+				50A3C74E189E8DD700B10EA2 /* Movie.m in Sources */,
 				50AA53A2189DAFED006AB237 /* main.m in Sources */,
 				50AA53AF189DAFED006AB237 /* DetailViewController.m in Sources */,
 			);
