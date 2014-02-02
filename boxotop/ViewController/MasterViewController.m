@@ -84,7 +84,12 @@
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     Movie_Cell *cell = [tableView dequeueReusableCellWithIdentifier:@"Movie_Cell" forIndexPath:indexPath];
-
+    
+    Movie *movie = self.model[indexPath.row];
+    
+    cell.titleLabel.text = movie.title;
+    cell.yearLabel.text = [movie.year stringValue];
+    
     return cell;
 }
 
