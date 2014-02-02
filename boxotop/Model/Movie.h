@@ -8,6 +8,9 @@
 
 #import <Mantle.h>
 
+@class Posters;
+
+
 @interface Movie : MTLModel <MTLJSONSerializing>
 
 @property (readonly, copy, nonatomic) NSString *movieID;
@@ -19,5 +22,6 @@
 
 @property (readonly, copy, nonatomic) NSString *synopsis;
 
+@property (readonly, copy, nonatomic) Posters *posters;
 
 @end
