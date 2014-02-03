@@ -10,22 +10,13 @@
 
 @implementation DetailView
 
-- (id)initWithFrame:(CGRect)frame
-{
-    self = [super initWithFrame:frame];
-    if (self) {
-        // Initialization code
+- (void)awakeFromNib {
+    NSArray *views = @[self.synopsisTextView, self.castTextView, self.similarTextVew];
+    
+    for (UIView *view in views) {
+        view.layer.borderColor = [[UIColor blackColor] CGColor];
+        view.layer.borderWidth = 1.0f;
     }
-    return self;
 }
-
-/*
-// Only override drawRect: if you perform custom drawing.
-// An empty implementation adversely affects performance during animation.
-- (void)drawRect:(CGRect)rect
-{
-    // Drawing code
-}
-*/
 
 @end

@@ -9,6 +9,7 @@
 #import "DetailViewController.h"
 #import "DetailViewController+Private.h"
 
+#import "DetailView.h"
 #import "Movie.h"
 
 #import <AFNetworking.h>
@@ -30,7 +31,13 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
+    // async load json for similar movies
     [self fetchSimilar:self.movie.similiarMoviesLink];
+    
+    // setup ScrollView/DetailView
+    self.detailView = [[NSBundle mainBundle] loadNibNamed:@"DetailView" owner:self options:nil][0];
+    [self.scrollView addSubview:self.detailView];
+    self.scrollView.contentSize = CGSizeMake(self.detailView.frame.size.width, self.detailView.frame.size.height);
     
     [self configureView];
 }
@@ -40,25 +47,25 @@
     if (_movie != newMovie) {
         _movie = newMovie;
 
-        // Update the view.
+        // Update the view
         [self configureView];
     }
 }
 
 #pragma mark - Utils
 - (void)configureView {
-    self.titleLabel.text = self.movie.title;
-    self.borderView.layer.borderColor = [[UIColor blackColor] CGColor];
-    self.borderView.layer.borderWidth = 1.0f;
+    self.detailView.titleLabel.text = self.movie.title;
+    self.detailView.borderView.layer.borderColor = [[UIColor blackColor] CGColor];
+    self.detailView.borderView.layer.borderWidth = 1.0f;
     
-    [self.thumbnailImageView setImageWithURL:self.movie.posters.detailed];
-    self.releaseDateLabel.text = [self.dateFormatter stringFromDate:self.movie.theaterReleaseDate];
+    [self.detailView.thumbnailImageView setImageWithURL:self.movie.posters.detailed];
+    self.detailView.releaseDateLabel.text = [self.dateFormatter stringFromDate:self.movie.theaterReleaseDate];
     
-    self.criticsScoreImageView.image = [self imageFromScore:self.movie.ratings.critics_score];
-    self.audienceScoreImageView.image = [self imageFromScore:self.movie.ratings.audience_score];
+    self.detailView.criticsScoreImageView.image = [self imageFromScore:self.movie.ratings.critics_score];
+    self.detailView.audienceScoreImageView.image = [self imageFromScore:self.movie.ratings.audience_score];
     
-    self.synopsisTextView.text = self.movie.synopsis;
-    self.castTextView.text = [self castsList];
+    self.detailView.synopsisTextView.text = self.movie.synopsis;
+    self.detailView.castTextView.text = [self castsList];
 }
 
 - (UIImage *)imageFromScore:(NSNumber *)score {
@@ -149,7 +156,7 @@
         [similarMovies deleteCharactersInRange:NSMakeRange(0, 2)];
     }
     
-    self.similarTextVew.text = similarMovies;
+    self.detailView.similarTextVew.text = similarMovies;
 }
 
 @end

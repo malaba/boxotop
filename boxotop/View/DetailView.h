@@ -10,4 +10,15 @@
 
 @interface DetailView : UIView
 
+@property (weak, nonatomic) IBOutlet UIView *borderView;
+@property (weak, nonatomic) IBOutlet UILabel *titleLabel;
+@property (weak, nonatomic) IBOutlet UIImageView *thumbnailImageView;
+@property (weak, nonatomic) IBOutlet UILabel *releaseDateLabel;
+@property (weak, nonatomic) IBOutlet UIImageView *criticsScoreImageView;
+@property (weak, nonatomic) IBOutlet UIImageView *audienceScoreImageView;
+
+@property (weak, nonatomic) IBOutlet UITextView *synopsisTextView;
+@property (weak, nonatomic) IBOutlet UITextView *castTextView;
+@property (weak, nonatomic) IBOutlet UITextView *similarTextVew;
+
 @end
