@@ -12,6 +12,10 @@
 
 @property (strong, nonatomic) NSDateFormatter *dateFormatter;
 
+@property (strong, nonatomic) DetailView *detailView;
+
+@property (weak, nonatomic) IBOutlet UIScrollView *scrollView;
+
 - (void)configureView;
 
 @end

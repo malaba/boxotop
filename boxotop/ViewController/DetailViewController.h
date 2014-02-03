@@ -14,8 +14,5 @@
 @interface DetailViewController : UIViewController
 
 @property (strong, nonatomic) Movie *movie;
-@property (strong, nonatomic) DetailView *detailView;
-
-@property (weak, nonatomic) IBOutlet UIScrollView *scrollView;
 
 @end
