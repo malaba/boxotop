@@ -1,17 +1,16 @@
 - constante magique (ex: URL des json)
 - pas d'handle des error, logging primitif
 - cosmetique rapide...
-	- label multiligne 
+- custom NavigationBar
 
 - list: ordre alpha ? du json ??
 - multi-lingue
 - restoration ID
 
-- fallait faire un XIB long vertical pour DetailedView
-	- avec sous-groupe pour gérer mieux les constraints
-
-- une classe Model, qui fetch tous les Movie
+- une classe Model, qui encapsule le model.
 	- on peut les consulter après par ID
+	- Mantle/AFNetworking live ne RAM, ou CoreData on s'en fou
 
 - robusteste: html au lieu de json (on doit accepter ?)
+	fait à la mano, mais un classe qui gère les fetch seraient mieux
 
