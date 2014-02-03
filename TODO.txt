@@ -1,0 +1,17 @@
+- constante magique (ex: URL des json)
+- pas d'handle des error, logging primitif
+- cosmetique rapide...
+	- label multiligne 
+
+- list: ordre alpha ? du json ??
+- multi-lingue
+- restoration ID
+
+- fallait faire un XIB long vertical pour DetailedView
+	- avec sous-groupe pour gérer mieux les constraints
+
+- une classe Model, qui fetch tous les Movie
+	- on peut les consulter après par ID
+
+- robusteste: html au lieu de json (on doit accepter ?)
+
