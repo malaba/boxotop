@@ -26,5 +26,6 @@
 @property (readonly, copy, nonatomic) NSString *synopsis;
 @property (readonly, copy, nonatomic) Posters *posters;
 @property (readonly, copy, nonatomic) NSArray *abridged_cast;
+@property (readonly, copy, nonatomic) NSString *similiarMoviesLink;
 
 @end

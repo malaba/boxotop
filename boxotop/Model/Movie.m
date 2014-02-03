@@ -31,7 +31,8 @@
     // Note: almost all properties are implicitly mapped
     return @{
              @"movieID": @"id",
-             @"theaterReleaseDate": @"release_dates.theater"
+             @"theaterReleaseDate": @"release_dates.theater",
+             @"similiarMoviesLink": @"links.similar"
     };
 }
 

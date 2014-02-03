@@ -11,6 +11,7 @@
 
 #import "Movie.h"
 
+#import <AFNetworking.h>
 #import <UIImageView+AFNetworking.h>
 
 
@@ -28,6 +29,8 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
+    [self fetchSimilar:self.movie.similiarMoviesLink];
     
     [self configureView];
 }
@@ -99,9 +102,54 @@
         [casts appendFormat:@", %@", cast.name];
     }
     
-    [casts deleteCharactersInRange:NSMakeRange(0, 2)];
+    if ([casts length] > 2) {
+        [casts deleteCharactersInRange:NSMakeRange(0, 2)];
+    }
     
     return casts;
+}
+
+#pragma mark - fetch JSON for similar movies
+- (void)fetchSimilar:(NSString *)url {
+    AFHTTPRequestOperationManager *manager = [AFHTTPRequestOperationManager manager];
+    
+    // handle the case where the server return an HTML content-type instead of a JSON
+    manager.responseSerializer.acceptableContentTypes = [manager.responseSerializer.acceptableContentTypes setByAddingObjectsFromSet:[NSSet setWithObject:@"text/html"]];
+    
+    [manager GET:url
+      parameters:nil
+         success:^(AFHTTPRequestOperation *operation, id responseObject) {
+             if ([responseObject isKindOfClass:[NSDictionary class]]) {
+                 [self parseResponse:responseObject];
+             }
+         }
+         failure:^(AFHTTPRequestOperation *operation, NSError *error) {
+             NSLog(@"Error: %@", error);
+         }];
+}
+
+- (void)parseResponse:(NSDictionary *)json {
+    NSMutableString *similarMovies = [NSMutableString new];
+    
+    NSArray *movies = json[@"movies"];
+    
+    NSError *error = nil;
+    for (NSDictionary *movieDict in movies) {
+        Movie *movie = [MTLJSONAdapter modelOfClass:Movie.class
+                                 fromJSONDictionary:movieDict
+                                              error:&error];
+        if (error) {
+            NSLog(@"error parsing one movie: %@", error);
+        }
+        
+        [similarMovies appendFormat:@", %@", movie.title];
+    }
+    
+    if ([similarMovies length] > 2) {
+        [similarMovies deleteCharactersInRange:NSMakeRange(0, 2)];
+    }
+    
+    self.similarTextVew.text = similarMovies;
 }
 
 @end
