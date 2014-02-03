@@ -14,6 +14,8 @@
 		503E57DC189EA27A00DEC004 /* Posters.m in Sources */ = {isa = PBXBuildFile; fileRef = 503E57DB189EA27A00DEC004 /* Posters.m */; };
 		5046A00B189F039D0056045C /* Cast.m in Sources */ = {isa = PBXBuildFile; fileRef = 5046A00A189F039D0056045C /* Cast.m */; };
 		5080A670189EC91C0061695A /* Ratings.m in Sources */ = {isa = PBXBuildFile; fileRef = 5080A66F189EC91C0061695A /* Ratings.m */; };
+		50A4D49D18A00379007653B2 /* DetailView.m in Sources */ = {isa = PBXBuildFile; fileRef = 50A4D49C18A00379007653B2 /* DetailView.m */; };
+		50A4D49F18A00485007653B2 /* DetailView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 50A4D49E18A00485007653B2 /* DetailView.xib */; };
 		50AA5396189DAFED006AB237 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 50AA5395189DAFED006AB237 /* Foundation.framework */; };
 		50AA5398189DAFED006AB237 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 50AA5397189DAFED006AB237 /* CoreGraphics.framework */; };
 		50AA539A189DAFED006AB237 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 50AA5399189DAFED006AB237 /* UIKit.framework */; };
@@ -57,6 +59,9 @@
 		5046A00A189F039D0056045C /* Cast.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Cast.m; sourceTree = "<group>"; };
 		5080A66E189EC91C0061695A /* Ratings.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Ratings.h; sourceTree = "<group>"; };
 		5080A66F189EC91C0061695A /* Ratings.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Ratings.m; sourceTree = "<group>"; };
+		50A4D49B18A00379007653B2 /* DetailView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DetailView.h; sourceTree = "<group>"; };
+		50A4D49C18A00379007653B2 /* DetailView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DetailView.m; sourceTree = "<group>"; };
+		50A4D49E18A00485007653B2 /* DetailView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DetailView.xib; sourceTree = "<group>"; };
 		50AA5392189DAFED006AB237 /* boxotop.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = boxotop.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		50AA5395189DAFED006AB237 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		50AA5397189DAFED006AB237 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -140,6 +145,16 @@
 			path = Cell;
 			sourceTree = "<group>";
 		};
+		50A4D49A18A00379007653B2 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				50A4D49B18A00379007653B2 /* DetailView.h */,
+				50A4D49C18A00379007653B2 /* DetailView.m */,
+				50A4D49E18A00485007653B2 /* DetailView.xib */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
 		50AA5389189DAFED006AB237 = {
 			isa = PBXGroup;
 			children = (
@@ -180,6 +195,7 @@
 				50AA53A7189DAFED006AB237 /* Main.storyboard */,
 				503E57CF189E992800DEC004 /* Model */,
 				503E57D6189E99D600DEC004 /* Cell */,
+				50A4D49A18A00379007653B2 /* View */,
 				503E57C6189E988A00DEC004 /* ViewController */,
 				50AA53B0189DAFED006AB237 /* Images.xcassets */,
 				50AA539C189DAFED006AB237 /* Supporting Files */,
@@ -298,6 +314,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				50AA53B1189DAFED006AB237 /* Images.xcassets in Resources */,
+				50A4D49F18A00485007653B2 /* DetailView.xib in Resources */,
 				50AA53A0189DAFED006AB237 /* InfoPlist.strings in Resources */,
 				50AA53A9189DAFED006AB237 /* Main.storyboard in Resources */,
 			);
@@ -356,6 +373,7 @@
 				503E57CD189E988A00DEC004 /* DetailViewController.m in Sources */,
 				5080A670189EC91C0061695A /* Ratings.m in Sources */,
 				503E57D2189E992800DEC004 /* Movie.m in Sources */,
+				50A4D49D18A00379007653B2 /* DetailView.m in Sources */,
 				503E57D9189E99D600DEC004 /* Movie_Cell.m in Sources */,
 				503E57DC189EA27A00DEC004 /* Posters.m in Sources */,
 			);
